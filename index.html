@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My First Blog</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <link rel="stylesheet" href="./assets/css/form.css" />
+    </head>
+    <body>
+        <label>
+            <input type="checkbox" data-color="light" class="theme-switcher">
+            <span class="slider round"></span>
+          </label>
+    <div class="style-container">
+        <main>
+            <header>
+                <h1>My First Blog</h1>
+                <!--sun image-->
+                    <div class="circle-light">
+                    </div>
+                    <div class="circle-dark">
+                    </div>
+                
+            </header>
+        </main>
+
+        <aside>
+            <h2>What's on your mind?</h2>
+            <section class="inputs">
+            <ul>
+                <li> <!--username w/ input/placeholder text-->
+                    <label for="username">Username:</label>
+                    <input id="username" type="text" placeholder="Enter Username...">
+                </li>
+                <li> <!--title w/ input/placeholder text-->
+                    <label for="title">Title:</label>
+                    <input id="title" type="text" placeholder="Enter Title...">
+                </li>    
+                <li> <!--content w/ input/placeholder text-->
+                    <label for="blog">Blog:</label>
+                    <textarea id="blog" name="blog"></textarea>
+                    
+                </li>
+            </ul>
+                    <!--submit button-->
+            <a href="file:///Users/brenbroussard/bootcamp/challenges/week04-challenge/blog.html">
+                <button id="submit">Submit</button>
+            </a>
+            </section>
+        </aside>
+    </div>
+        <script src="./assets/js/logic.js"></script>
+        <script src="./assets/js/form.js"></script>
+    </body>
+
+</html>
