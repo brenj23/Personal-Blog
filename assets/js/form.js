@@ -1,8 +1,8 @@
 const inputs = document.querySelector('.inputs');
-let username = document.getElementById('username');
-let title = document.getElementById('title');
-let blog = document.getElementById('blog');
-let submit = document.getElementById('submit');
+const username = document.getElementById('username');
+const title = document.getElementById('title');
+const content = document.getElementById('content');
+const submit = document.getElementById('submit');
 
 const switchCol = document.querySelector('.theme-switcher')
 document.querySelector('.circle-dark').style.display="none"
@@ -23,14 +23,18 @@ switchCol.addEventListener('click', function(event){
 
 })
 
- submit.addEventListener('click',function (event) {
-         let blogPost = {
+ submit.addEventListener('click',(event) => {
+    const listBlog = [];
+         const blogPost = {
              username: username.value,
              title: title.value,
-             blog: blog.value.trim(),
-         };
-         localStorage.setItem('blogPost',JSON.stringify(blogPost));
+             content: content.value.trim(),
+         }
+         listBlog.push(blogPost)
+         console.log(event.target.value)
+         localStorage.setItem('blogPost',JSON.stringify(listBlog))
+         window.location="blog.html"
         //  stored data to local storage.
         // change location of the page to blog.html using window.location.pathname
-     });
+     })
      
