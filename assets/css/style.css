@@ -207,3 +207,7 @@ input:checked + .slider:before {
 .dark-mode .back-button {
     background-color: #666
 }
+body.blog-page .sun-icon,
+body.blog-page .moon-icon {
+    display: none !important;
+}

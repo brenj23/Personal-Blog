@@ -12,11 +12,12 @@ function toggleTheme() {
     // Save the current theme preference to localStorage
     localStorage.setItem('theme', currentTheme);
     
-    // Show/hide sun and moon icons based on the current theme
-    if (currentTheme === 'light') {
+    // Show/hide sun and moon icons based on the current theme and page
+    const isBlogPage = document.body.classList.contains('blog-page');
+    if (currentTheme === 'light' && !isBlogPage) {
         hideSunIcon();
         showMoonIcon();
-    } else {
+    } else if (!isBlogPage) {
         hideMoonIcon();
         showSunIcon();
     }

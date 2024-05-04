@@ -10,8 +10,23 @@ document.getElementById('blog-form').addEventListener('submit', function(event) 
         return;
     }
 
-    const post = { username, title, content };
-    localStorage.setItem('post', JSON.stringify(post));
+    // Retrieve existing blog posts from local storage or initialize an empty array
+    const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
 
+    // Create a new post object
+    const post = { username, title, content };
+
+    // Add the new post to the array
+    blogPosts.push(post);
+
+    // Save the updated array back to local storage
+    localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
+
+    // Clear the form fields if needed
+    // document.getElementById('username').value = '';
+    // document.getElementById('title').value = '';
+    // document.getElementById('content').value = '';
+
+    // Redirect to the blog page
     window.location.href = 'blog.html';
 });
