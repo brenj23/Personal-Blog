@@ -51,12 +51,12 @@ document.getElementById('themeToggle').addEventListener('change', toggleTheme);
 
 // Initial setup based on current theme
 if (!currentTheme || currentTheme === 'light') {
-    document.body.classList.add('dark-mode');
-    document.body.classList.remove('light-mode');
+    document.body.classList.remove('dark-mode');
+    document.body.classList.add('light-mode');
     showSunIcon();
     hideMoonIcon();
 } else {
-    document.body.classList.add('light-mode');
+    document.body.classList.add('dark-mode');
     showMoonIcon();
     hideSunIcon();
 }
