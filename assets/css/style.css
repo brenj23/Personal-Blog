@@ -90,7 +90,7 @@ footer {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
+    top: -50px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -148,23 +148,16 @@ input:checked + .slider:before {
     transition: transform 0.3s;
 }
 
-/* .sun-icon {
-    width: 20px;
-    height: 20px;
-    background-color: #FFD700; 
-    border-radius: 50%;
-    position: relative;
-} */
 .sun-icon::before {
     content: "";
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     background: radial-gradient(yellow, darkorange);
     border-radius: 50%;
     border: rgb(248, 210, 60) solid 1px;
-    top: 50%;
-    left: 50%;
+    top: 1000%;
+    left: -1700%;
     transform: translate(-100%, -130%);
 }
 
@@ -172,13 +165,13 @@ input:checked + .slider:before {
 .moon-icon::before {
     content: "";
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 200px;
+    height: 200px;
     background: radial-gradient(white, #6d6d71);
     border-radius: 50%;
     border: #666 solid 1px;
-    top: 50%;
-    left: 50%;
+    top: 1000%;
+    left: -1700%;
     transform: translate(-100%, -130%);
 }
 
