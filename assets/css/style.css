@@ -2,11 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: orange;
 }
-
-header {
+.light-mode {
+    background-color: #f5f5f5;
+    color: #333;
+}
+.light-mode header {
     background-color: orange;
     color: #fff;
     padding: 20px;
@@ -39,7 +40,7 @@ textarea {
     border: 1px solid #ccc;
 }
 
-button {
+.light-mode button {
     padding: 10px 20px;
     background-color: orange;
     color: #fff;
@@ -48,18 +49,18 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.light-mode button:hover {
     background-color: darkorange;
 }
 
-footer {
+.light-mode footer {
     background-color: orange;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
 
-.back-button {
+.light-mode .back-button {
     float: right;
     color: #fff;
     text-decoration: none;
@@ -126,12 +127,78 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
     border-radius: 34px;
+    transition: background-color 0.3s;
 }
 
 .slider.round:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
     border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    transition: transform 0.3s;
 }
+
+.sun-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #FFD700; /* yellow */
+    border-radius: 50%;
+    position: relative;
+}
+
+.sun-icon::before,
+.sun-icon::after {
+    content: "";
+    position: absolute;
+    background-color: #FFD700; /* yellow */
+}
+
+.sun-icon::before {
+    width: 5px;
+    height: 20px;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sun-icon::after {
+    width: 20px;
+    height: 5px;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+}
+
+.moon-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc; /* light gray */
+    border-radius: 50%;
+    position: relative;
+}
+
+.moon-icon::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #fff; /* white */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 .dark-mode {
     background-color: #222;
