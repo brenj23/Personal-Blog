@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>My First Blog</title>
-        <link rel="stylesheet" href="./assets/css/style.css" />
-        <link rel="stylesheet" href="./assets/css/blog.css" />
-    </head>
-
-    <body>
-        <label>
-            <input type="checkbox" data-color="light" class="theme-switcher">
-            <span class="color-changer"></span>
-          </label>
-        <header>
-            <h1>My First Blog</h1>
-        </header>
-        <main>
-            <div id="blog">
-            </div>
-        </main>
-        <footer>
-            <ul>
-                <li>
-                    <a href="#Portfolio">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#Blog">Blog</a>
-                </li>
-                <li>
-                    <a href="#Email">Email</a>
-                </li>
-        </footer>
-        <script src="./assets/js/logic.js"></script>
-        <script src="./assets/js/blog.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Blog Posts</h1>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <a href="index.html" class="back-button">Back</a>
+    </header>
+    <main id="blog-posts"></main>
+    <footer>
+        <a href="#">Developer's Portfolio</a>
+    </footer>
+    <script src="assets/js/blog.js"></script>
+    <script src="assets/js/logic.js"></script>
+</body>
 </html>
